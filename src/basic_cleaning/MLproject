@@ -5,18 +5,30 @@ entry_points:
   main:
     parameters:
 
-      parameter1:
-        description: ## ADD DESCRIPTION
+      input_artifact:
+        description: A fully qualified name for the raw sample data
         type: string
 
-      parameter2:
-        description: ## ADD DESCRIPTION
+      output_artifact:
+        description: A fully qualified name for the cleaned data
         type: string
 
-      parameter3:
-        description: ## ADD DESCRIPTION
+      output_type:
+        description: Cleaned data
         type: string
+
+      output_description:
+        description: Data with some basic cleaning
+        type: string
+
+      min_price:
+        description: Minimum price to exclude outliers
+        type: float
+
+      max_price:
+        description: Maximum price to exclude outliers
+        type: float
 
 
     command: >-
-        python run.py  --parameter1 {parameter1}  --parameter2 {parameter2}  --parameter3 {parameter3} 
+        python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price} 
