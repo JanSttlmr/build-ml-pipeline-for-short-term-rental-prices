@@ -1,3 +1,9 @@
+# Notes for project submission
+- Wandb project: https://wandb.ai/jansttlmr-joa/nyc_airbnb/overview
+- github link: https://github.com/JanSttlmr/build-ml-pipeline-for-short-term-rental-prices
+  
+I had issues running the component train_val_test_split (components/train_val_test_split). It gave me an error (ImportError: /lib/x86_64-linux-gnu/libstdc++.so.6: version GLIBCXX_3.4.29' not found). I resolved it by manually activating the conda environment created by mlflow and downgrading the version of mlflow to 2.6.0 (conda install -c conda-forge mlflow=2.6.0).
+
 # Build an ML Pipeline for Short-Term Rental Prices in NYC
 You are working for a property management company renting rooms and properties for short periods of 
 time on various rental platforms. You need to estimate the typical price for a given property based 
